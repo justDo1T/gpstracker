@@ -2,9 +2,11 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            steps {
-                echo 'Build the repository'
-                sh './gradlew build'
+            echo 'Build the repository'
+            if (isUnix()) {
+                sh './gradlew clean build'
+            } else {
+                bat 'gradlew.bat clean build'
             }
         }
         stage('Stage 2') {
