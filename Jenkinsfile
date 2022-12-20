@@ -9,12 +9,13 @@ pipeline {
         stage('Build') {
              steps {
                 echo 'Build the repository'
-                sh './gradlew build'
+                sh './gradlew assemble'
             }
         }
-        stage('Stage 2') {
+        stage('Test') {
             steps {
-                echo 'Stage 2 here'
+                echo 'Test the repository'
+                sh './gradlew test'
             }
         }
         stage('Stage 3') {
