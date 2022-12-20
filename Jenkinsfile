@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
              steps {
                 echo 'Build the repository'
-                sh './gradlew clean build'
+                sh './gradlew build'
             }
         }
         stage('Stage 2') {
