@@ -6,7 +6,11 @@ plugins {
 
 group = 'com'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+
+java {
+	sourceCompatibility = JavaVersion.toVersion('17')
+	targetCompatibility = JavaVersion.toVersion('17')
+}
 
 repositories {
 	mavenCentral()
