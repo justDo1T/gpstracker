@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Test the repository'
+                echo 'Test the repo'
                 sh './gradlew test'
             }
         }
