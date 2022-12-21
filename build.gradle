@@ -11,7 +11,11 @@ sourceCompatibility = '17'
 application {
     mainClass = 'com.gpstracker.GpstrackerSpringApplication'
 }
-
+/*
+Needed to solve the problem of "no main manifest attribute, in .\build\libs\gpstracker-0.0.1-SNAPSHOT-plain.jar"
+https://stackoverflow.com/questions/69717756/spring-boot-gradle-project-deployed-to-heroku-using-bitbucket-pipeline-gives-err
+https://docs.spring.io/spring-boot/docs/2.5.1/gradle-plugin/reference/htmlsingle/#packaging-executable.and-plain-archives
+ */
 jar {
     enabled = false
 }
