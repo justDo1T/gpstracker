@@ -12,12 +12,8 @@ application {
     mainClass = 'com.gpstracker.GpstrackerSpringApplication'
 }
 
-bootJar {
-    archiveClassifier.set('boot')
-}
-
 jar {
-    archiveClassifier.set('')
+    enabled = false
 }
 
 repositories {
